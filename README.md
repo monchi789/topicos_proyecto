@@ -1,4 +1,4 @@
-# Proyecto de Detección de Plantas en la Región del Cusco
+# Identificación y Evaluación de Plantas para su correcto desarrollo y crecimiento en la región del Cusco.
 
 ## Integrantes
    * Almanza Cuno, Gonzalo Jair
@@ -45,9 +45,9 @@ En la imagen de arriba, puedes ver un ejemplo de detección en acción. La API a
    pip install -r requirements.txt
    ```
 3. **Ejecuta la aplicación:**
-   ````bash
+   ```bash
    uvicorn main:app --reload
-   ``
+   ``````
 4. **Accede a la Interfaz:**
    Visita http://localhost:8000/docs en tu navegador para interactuar con la API a través de Swagger.
 
