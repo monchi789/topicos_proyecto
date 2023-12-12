@@ -1,5 +1,10 @@
 # Proyecto de Detección de Plantas en la Región del Cusco
 
+## Integrantes
+   * Almanza Cuno, Gonzalo Jair
+   * Monzón Guzmán, Cristian
+   * Valle Ccorimanya, Jhon Darwin
+
 ## Descripción
 
 Bienvenido al repositorio de nuestro proyecto de Machine Learning para la detección de 20 plantas en la región del Cusco. Este proyecto ha sido desarrollado con el objetivo de contribuir al conocimiento y preservación de la diversidad botánica de la zona.
@@ -26,7 +31,7 @@ Los resultados pueden variar según las condiciones de las imágenes y la divers
 
 ### Ejemplo de Resultado
 
-![Ejemplo de Detección](img/ejemplo_deteccion.png)
+![Ejemplo de Detección](img/resultado.png)
 
 En la imagen de arriba, puedes ver un ejemplo de detección en acción. La API analiza la imagen y devuelve la especie de planta identificada junto con la confianza asociada.
 

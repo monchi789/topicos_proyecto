@@ -6,6 +6,8 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 from PIL import Image
 from io import BytesIO
+from config.database import db_dependency
+from models.plantas import Plantas
 
 router = APIRouter()
 
@@ -22,8 +24,8 @@ async def preprocess_image(file: UploadFile):
     img_array = img_array / 255.0
     return img_array
 
-@router.post("/predict")
-async def predict_image(file: UploadFile):
+@router.post("/prediccion")
+async def predict_image(db: db_dependency, file: UploadFile):
     try:
         # Preprocesar la imagen
         img_array = await preprocess_image(file)
@@ -32,8 +34,10 @@ async def predict_image(file: UploadFile):
         prediction = model.predict(img_array)
         label = np.argmax(prediction)
 
-        # Devolver la predicción
-        return JSONResponse(content={"prediction_label": int(label)}, status_code=200)
+        print(label, type(label))
 
+        # Devolver la predicción
+        return db.query(Plantas).filter(Plantas.id == int(label)).first()
+    
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
